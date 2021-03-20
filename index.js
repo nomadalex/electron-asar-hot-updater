@@ -133,12 +133,8 @@ var Updater = {
     request(
       {
         url: this.setup.api,
-        method: 'post',
+        method: 'get',
         json: true,
-        body: this.setup.body || {
-          name: packageInfo.name,
-          current: packageInfo.version
-        },
         headers: this.setup.headers || {}
       },
       function (error, res, body) {
